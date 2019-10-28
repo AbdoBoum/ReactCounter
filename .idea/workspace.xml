@@ -43,8 +43,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Counter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+            <state relative-caret-position="17">
+              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -164,7 +164,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572257837867</updated>
-      <workItem from="1572257839847" duration="3001000" />
+      <workItem from="1572257839847" duration="4206000" />
     </task>
     <task id="LOCAL-00001" summary="Initial setup">
       <created>1572258452097</created>
@@ -180,11 +180,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572260052489</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Changing background color finished">
+      <created>1572260891067</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572260891067</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3001000" />
+    <option name="totallyTimeSpent" value="4206000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -217,7 +224,8 @@
     <MESSAGE value="Initial setup" />
     <MESSAGE value="Finishing the counter." />
     <MESSAGE value="Counter working." />
-    <option name="LAST_COMMIT_MESSAGE" value="Counter working." />
+    <MESSAGE value="Changing background color finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing background color finished" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/index.html">
@@ -256,8 +264,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Counter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" column="38" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        <state relative-caret-position="17">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
         </state>
       </provider>
     </entry>

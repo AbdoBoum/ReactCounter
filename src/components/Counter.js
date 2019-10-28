@@ -2,11 +2,11 @@ import React from 'react';
 
 class Counter extends React.Component {
 
-    state = {seconds: 40};
+    state = {seconds: 40, isCounting: true};
     color = 'blue';
 
     componentDidMount() {
-        setInterval(() => {
+        this.myInterval = setInterval(() => {
             const seconds = this.state;
             if (this.state.seconds > 0) {
                 this.setState(({seconds}) => ({
@@ -14,7 +14,7 @@ class Counter extends React.Component {
                 }))
             }
 
-        }, 1000)
+        }, 1000);
     }
 
     renderCounter() {
@@ -33,10 +33,47 @@ class Counter extends React.Component {
         );
     }
 
+    startCounter = () => {
+        this.setState({isCounting: true});
+        this.myInterval = setInterval(() => {
+            const seconds = this.state;
+            if (this.state.seconds > 0) {
+                this.setState(({seconds}) => ({
+                    seconds: seconds - 1
+                }))
+            }
+
+        }, 1000);
+    };
+
+    stopCounter = () => {
+        this.setState({isCounting: false});
+        clearInterval(this.myInterval);
+    };
+
+    renderButtons = () => {
+        if(this.state.isCounting) {
+            return(
+                <React.Fragment>
+                    <div className="btn btn-green disabled" onClick={this.startCounter}>Start</div>
+                    <div className="btn btn-red" onClick={this.stopCounter}>Stop</div>
+                </React.Fragment>
+            )
+        } else {
+            return(
+                <React.Fragment>
+                    <div className="btn btn-green" onClick={this.startCounter}>Start</div>
+                    <div className="btn btn-red disabled" onClick={this.stopCounter}>Stop</div>
+                </React.Fragment>
+            )
+        }
+    };
+
     render() {
         return (
             <React.Fragment>
                 {this.renderCounter()}
+                {this.renderButtons()}
             </React.Fragment>);
     }
 }
