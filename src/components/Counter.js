@@ -2,7 +2,7 @@ import React from 'react';
 
 class Counter extends React.Component {
 
-    state = {seconds: this.props.seconds, isCounting: true};
+    state = {seconds: this.props.seconds || 40, isCounting: true};
     color = 'blue';
 
     componentDidMount() {
@@ -27,7 +27,7 @@ class Counter extends React.Component {
             this.color = 'red'
         }
         return (
-            <div className="col-md-4 mx-auto py-4 text-white" style={{backgroundColor: `${this.color}`}}>
+            <div className="col-md-4 mx-auto py-4 text-white" style={{backgroundColor: `${this.color}`}} id="rec">
                 {seconds < 10 ? `0${seconds}` : seconds}
             </div>
         );
