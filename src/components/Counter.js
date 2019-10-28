@@ -2,13 +2,13 @@ import React from 'react';
 
 class Counter extends React.Component {
 
-    state = {seconds: 40, isCounting: true};
+    state = {seconds: this.props.seconds, isCounting: true};
     color = 'blue';
 
     componentDidMount() {
+        const {seconds} = this.state;
         this.myInterval = setInterval(() => {
-            const seconds = this.state;
-            if (this.state.seconds > 0) {
+            if (seconds > 0) {
                 this.setState(({seconds}) => ({
                     seconds: seconds - 1
                 }))
@@ -27,7 +27,7 @@ class Counter extends React.Component {
             this.color = 'red'
         }
         return (
-            <div className="col-md-6 mx-auto py-4 text-white" style={{backgroundColor: `${this.color}`}}>
+            <div className="col-md-4 mx-auto py-4 text-white" style={{backgroundColor: `${this.color}`}}>
                 {seconds < 10 ? `0${seconds}` : seconds}
             </div>
         );
